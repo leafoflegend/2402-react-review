@@ -29,6 +29,7 @@ function App() {
         try {
             const responsePokemon = await getPokemon(page + 1);
             setPage(page + 1);
+            // NOTE: Previous Pokemon Array, with new response pokemon added on to end of array.
             setPokemon([...pokemon, ...responsePokemon]);
         } catch (e) {
             console.error('Failed to fetch more pokemon on request.');
